@@ -12,7 +12,7 @@ class ModelHandler:
     def generate_response(self, prompt):
         response = self.model.invoke(prompt)
 
-        return response
+        return response.content
 
     def _setup_openai_model(self):
         # define underlying LLM
