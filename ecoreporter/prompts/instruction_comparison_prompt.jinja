@@ -1,0 +1,22 @@
+## Task
+Your task is to read a company's climate change report and check if it contains
+information regarding a specific topic, and if that information is reported correctly.
+
+## Topic to Search For:
+{{ report_component }}
+
+## Topic Description:
+{{ report_component_description }}
+
+## Climate Change Report:
+{{ report }}
+
+### Expected Output Format:
+Please provide the response as a list of JSON objects, with each object having the following keys:
+- title: The main title of the section, which is {{ report_component }}.
+- description: A brief description of the content, which is {{ report_component_description }}.
+- is_reported: A boolean indicating if this item is reported correctly with all
+the information requested in the description.
+- report_content: The section of the report containing this information.
+
+Ensure all JSON objects are part of a valid JSON array, without Markdown or additional formatting.

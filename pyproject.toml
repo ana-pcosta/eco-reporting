@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ecoreporter"
+version = "0.1.0"
+description = "Evaluating and generating climate change reports"
+readme = "README.md"
+requires-python = ">=3.10"
+# Project dependencies
+dependencies = [
+    "dash>=2.10.0",
+    "plotly>=5.15.0",
+    "pandas>=2.0.0",
+    "numpy>=1.23.0",
+    "monai-weekly[nibabel, tqdm, einops]",
+    "deepspeed==0.16.0",
+    "python-dotenv",
+    "pyyaml",
+    "llama-index==0.12.8",
+    "docx2txt>=0.8",
+    "Jinja2==3.1.5",
+    "langchain==0.3.13",
+    "langchain-openai==0.2.14"
+]
+
+
+[tool.setuptools]
+packages = ["ecoreporter"]
+
+[project.optional-dependencies]
+dev = [
+    "matplotlib",
+    "jupyter",
+    "ipykernel",
+    "pytest",
+    "flake8",
+    "black",
+]
+
+# Black formatter configuration
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+# Ruff linter configuration
+[tool.ruff]
+line-length = 88
+target-version = "py38"
